@@ -13,30 +13,30 @@
 // cm='fdsfsd';
 // cm=12
 
-// album='1323';
-// album=1231
-// album=true
-// myName='NAme';
-// myName='jhone';
-// meaningOfLife=21
-// isLoading=true
-// console.log(myName);
-// const sum=(a:number,b:string)=>{
-//     return a+b;
-// }
+album='1323';
+album=1231
+album=true
+myName='NAme';
+myName='jhone';
+meaningOfLife=21
+isLoading=true
+console.log(myName);
+const sum=(a:number,b:string)=>{
+    return a+b;
+}
 // console.log(sum(12,'ddad'));
 
 // let re:RegExp=/\w+/g //RegExp type in typescript 
 //:TODO: checklison-3
-let stringArr=['name','hey','ru'];
+// let stringArr=['name','hey','ru'];
 let guitars=['Strat','Les paul',5150];
 let mixedData=['EVH',1984,true];
 stringArr[0]='amfd'
 stringArr.push('sfs');
-mixedData[0]='abstr'
-//add ing data in array
-let test=[];
-let mono:string[]=[]
+// mixedData[0]='abstr'
+// //add ing data in array
+// let test=[];
+// let mono:string[]=[]
 
 //Tuple
 let myTuple:[string,number,boolean]=['Dave',42,true];

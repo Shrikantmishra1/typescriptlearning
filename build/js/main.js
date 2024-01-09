@@ -26,18 +26,18 @@
 // console.log(sum(12,'ddad'));
 // let re:RegExp=/\w+/g //RegExp type in typescript 
 //:TODO: checklison-3
-let stringArr = ['name', 'hey', 'ru'];
-let guitars = ['Strat', 'Les paul', 5150];
-let mixedData = ['EVH', 1984, true];
-stringArr[0] = 'amfd';
-stringArr.push('sfs');
-mixedData[0] = 'abstr';
-//add ing data in array
-let test = [];
-let mono = [];
-//Tuple
-let myTuple = ['Dave', 42, true];
-let mixed = ['Johne', 1, true];
-mixed = myTuple;
-console.log(mixed);
-console.log(myTuple);
+// let stringArr = ['name', 'hey', 'ru'];
+// let guitars = ['Strat', 'Les paul', 5150];
+// let mixedData = ['EVH', 1984, true];
+// stringArr[0] = 'amfd';
+// stringArr.push('sfs');
+// mixedData[0] = 'abstr';
+// //add ing data in array
+// let test = [];
+// let mono = [];
+// //Tuple
+// let myTuple = ['Dave', 42, true];
+// let mixed = ['Johne', 1, true];
+// mixed = myTuple;
+// console.log(mixed);
+// console.log(myTuple);
