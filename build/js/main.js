@@ -2,71 +2,65 @@
 // let a:number=12
 // let b:string='6'
 // let c:number=2;
-// console.log(b);
-// console.log(c+b);
-//data typed in typescript
-// let myName:string;
-// let meaningOfLife:number;
-// let isLoading:boolean;
-// let album:any;//any type
-// let cm:string | number;//union type
-// cm='fdsfsd';
-// cm=12
-// album='1323';
-// album=1231
-// album=true
-// myName='NAme';
-// myName='jhone';
-// meaningOfLife=21
-// isLoading=true
-// console.log(myName);
-// const sum=(a:number,b:string)=>{
-//     return a+b;
-// }
-// console.log(sum(12,'ddad'));
-// let re:RegExp=/\w+/g //RegExp type in typescript
-//:TODO: checklison-3
-let stringArr = ["name", "hey", "ru"];
-let guitars = ["Strat", "Les paul", 5150];
-let mixedData = ["EVH", 1984, true];
-stringArr[0] = "amfd";
-stringArr.push("sfs");
-mixedData[0] = "abstr";
-//add ing data in array
-let test = [];
-let mono = [];
-//Tuple
-let myTuple = ["Dave", 42, true];
-let mixed = ["Johne", 1, true];
-mixed = myTuple;
-console.log(mixed);
-console.log(myTuple);
-let evh = {
-    name: "Anubhav",
-    active: false,
-    albums: [1983, 5150, "OU812"],
+//Literal Types
+let myName;
+let username;
+username = "Amy";
+//functions
+const add = (a, b) => {
+    return a + b;
 };
-let jp = {
-    name: "Shrikant",
-    albums: [1232, 434, "Ou321"],
+const logMesg = (message) => {
+    console.log(message);
 };
-const greetGuitarist = (guitarist) => {
-    var _a;
-    if (guitarist.name) {
-        return `Hello ${(_a = guitarist.name) === null || _a === void 0 ? void 0 : _a.toUpperCase()}!`;
+logMesg("Helo");
+logMesg(add(2, 4));
+let subtract = function (c, d) {
+    return c - d;
+};
+let multiply = function (c, d) {
+    return c * d;
+};
+logMesg(multiply(2, 5));
+// OPTIONAL PARAMETERS FOR TYPESCRIPT:
+const addAll = (a, b, c) => {
+    if (typeof c !== 'undefined') {
+        return a + b + c;
     }
-    return `Hello!`;
+    return a + b;
 };
-console.log(greetGuitarist(jp));
-///Enums :
-// "Unlike most Typesript features,Enums are not a type-level
-// addition to javascript but something added to the language and runtime."
-var Grade;
-(function (Grade) {
-    Grade[Grade["U"] = 1] = "U";
-    Grade[Grade["D"] = 2] = "D";
-    Grade[Grade["C"] = 3] = "C";
-    Grade[Grade["B"] = 4] = "B";
-    Grade[Grade["A"] = 5] = "A";
-})(Grade || (Grade = {}));
-console.log(Grade.A);
+//default parameters
+const sumAll = (a, b, c = 2) => {
+    return a + b + c;
+};
+logMesg(sumAll(2, 4, 9));
+//REST PARAMETERS
+const total = (...nums) => {
+    return nums.reduce((prev, curr) => prev + curr);
+};
+logMesg(total(1, 3, 4, 6));
+//NEVER TYPE
+const createError = (errMsg) => {
+    throw new Error(errMsg);
+};
+const inifinite = () => {
+    let i = 1;
+    while (true) {
+        i++;
+        if (1 > 100)
+            break;
+    }
+};
+//custom function gaurd function
+const isNumber = (value) => {
+    return typeof value === 'number'
+        ? true : false;
+};
+//use of never type
+const numberORstring = (value) => {
+    if (typeof value === 'string')
+        return 'string';
+    if (typeof value === 'number')
+        return 'number';
+    return createError('This should never happen !');
+};
