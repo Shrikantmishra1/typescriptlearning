@@ -4,7 +4,7 @@
 
 // console.log(b);
 // console.log(c+b);
-//data typed in typescript 
+//data typed in typescript
 // let myName:string;
 // let meaningOfLife:number;
 // let isLoading:boolean;
@@ -26,22 +26,59 @@
 // }
 // console.log(sum(12,'ddad'));
 
-// let re:RegExp=/\w+/g //RegExp type in typescript 
+// let re:RegExp=/\w+/g //RegExp type in typescript
 //:TODO: checklison-3
-let stringArr=['name','hey','ru'];
-let guitars=['Strat','Les paul',5150];
-let mixedData=['EVH',1984,true];
-stringArr[0]='amfd'
-stringArr.push('sfs');
-mixedData[0]='abstr'
+let stringArr = ["name", "hey", "ru"];
+let guitars = ["Strat", "Les paul", 5150];
+let mixedData = ["EVH", 1984, true];
+stringArr[0] = "amfd";
+stringArr.push("sfs");
+mixedData[0] = "abstr";
 //add ing data in array
-let test=[];
-let mono:string[]=[]
+let test = [];
+let mono: string[] = [];
 
 //Tuple
-let myTuple:[string,number,boolean]=['Dave',42,true];
-let mixed=['Johne',1,true];
-mixed=myTuple
+let myTuple: [string, number, boolean] = ["Dave", 42, true];
+let mixed = ["Johne", 1, true];
+mixed = myTuple;
 console.log(mixed);
 console.log(myTuple);
 //Object declearion
+type Ritik = {
+  name: string;
+  album: (string | number)[];
+};
+interface Guitarist {
+  name?: string;
+  active?: boolean;
+  albums: (string | number)[];
+}
+let evh: Guitarist = {
+  name: "Anubhav",
+  active: false,
+  albums: [1983, 5150, "OU812"],
+};
+let jp: Guitarist = {
+  name: "Shrikant",
+  albums: [1232, 434, "Ou321"],
+};
+const greetGuitarist = (guitarist: Guitarist) => {
+  if (guitarist.name) {
+    return `Hello ${guitarist.name?.toUpperCase()}!`;
+  }
+  return `Hello!`;
+};
+console.log(greetGuitarist(jp));
+///Enums :
+// "Unlike most Typesript features,Enums are not a type-level
+// addition to javascript but something added to the language and runtime."
+
+enum Grade{
+      U=1,
+      D,
+      C,
+      B,
+      A,
+}
+console.log(Grade.A)
